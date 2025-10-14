@@ -1,20 +1,18 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "public/index.php",
-      "use": "@vercel/php",
-      "config": { "runtime": "php-8.2" }
-    },
-    {
-      "src": "resources/js/app.js",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public/build"
-      }
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.2"
     }
-  ],
+  },
+  "installCommand": "composer install --no-dev --prefer-dist && npm install",
+  "buildCommand": "php artisan route:clear && php artisan config:clear && php artisan view:clear && php artisan optimize:clear && php artisan view:cache && npm run build",
   "routes": [
-    { "src": "/(.*)", "dest": "public/index.php" }
+    { "src": "/build/(.*)", "dest": "public/build/$1" },
+    { "src": "/codes/script.js", "dest": "public/codes/script.js" },
+    { "src": "/images/lagu.mp3", "dest": "public/images/lagu.mp3" },
+    { "src": "/fontawesome/css/(.*)", "dest": "public/fontawesome/css/$1" },
+    { "src": "/fontawesome/webfonts/(.*)", "dest": "public/fontawesome/webfonts/$1" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
