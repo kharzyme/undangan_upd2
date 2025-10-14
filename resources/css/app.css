@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
+@import 'tailwindcss';
+@import 'animate.css';
+    
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-Jost: 'Jost';
+    --font-Rivage: 'Beau Rivage';
+    --font-Caramel: 'Caramel';
+    --color-cream: #D2B48C;
+    --color-wheat: #F5DEB3;
+    --color-cream2: #C4AB7F;
+    --shadow-rata: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+}
