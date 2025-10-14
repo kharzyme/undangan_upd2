@@ -6,7 +6,7 @@
     }
   },
   "installCommand": "npm install",
-  "buildCommand": "php artisan route:clear && php artisan config:clear && php artisan view:clear && php artisan optimize:clear && php artisan view:cache && npm run build",
+  "buildCommand": "npm run build",
   "routes": [
     { "src": "/build/(.*)", "dest": "public/build/$1" },
     { "src": "/codes/script.js", "dest": "public/codes/script.js" },
