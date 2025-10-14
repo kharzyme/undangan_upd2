@@ -5,12 +5,12 @@
       "runtime": "vercel-php@0.7.2"
     }
   },
-  "installCommand": "curl -sS https://getcomposer.org/installer | php && php composer.phar install --no-dev --prefer-dist && npm install",
+  "installCommand": "npm install",
   "buildCommand": "php artisan route:clear && php artisan config:clear && php artisan view:clear && php artisan optimize:clear && php artisan view:cache && npm run build",
   "routes": [
     { "src": "/build/(.*)", "dest": "public/build/$1" },
     { "src": "/codes/script.js", "dest": "public/codes/script.js" },
-    { "src": "/images/lagu.mp3", "dest": "public/images/lagu.mp3" },
+    { "src": "/images/Penjaga_Hati.mp3", "dest": "public/images/Penjaga_Hati.mp3" },
     { "src": "/fontawesome/css/(.*)", "dest": "public/fontawesome/css/$1" },
     { "src": "/fontawesome/webfonts/(.*)", "dest": "public/fontawesome/webfonts/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
