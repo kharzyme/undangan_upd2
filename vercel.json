@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/index.php", "use": "vercel-php@0.7.2" }
+    { "src": "public/index.php", "use": "vercel-php@0.7.2" }
   ],
   "installCommand": "npm install",
   "buildCommand": "npm run build",
@@ -11,7 +11,7 @@
     { "src": "/images/Penjaga_Hati.mp3", "dest": "public/images/Penjaga_Hati.mp3" },
     { "src": "/fontawesome/css/(.*)", "dest": "public/fontawesome/css/$1" },
     { "src": "/fontawesome/webfonts/(.*)", "dest": "public/fontawesome/webfonts/$1" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/(.*)", "dest": "public/index.php" }
   ]
 }
 
