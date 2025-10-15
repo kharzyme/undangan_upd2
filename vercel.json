@@ -14,7 +14,8 @@
           "routes/**",
           "vendor/**",
           "storage/**",
-          "public/build/**"
+          "public/build/**",
+          "public/build/.vite/**"
         ]
       }
     }
