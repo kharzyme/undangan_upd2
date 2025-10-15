@@ -14,11 +14,13 @@
           "routes/**",
           "vendor/**",
           "storage/**",
-          "public/build/**",
-          "public/build/.vite/**"
+          "public/build/**"
         ]
       }
     }
+  ],
+  "publicFiles": [
+    "public/build/**"
   ],
   "routes": [
     { "src": "/build/(.*)", "dest": "public/build/$1" },
