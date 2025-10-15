@@ -5,6 +5,9 @@
       "runtime": "vercel-php@0.7.2"
     }
   },
+  "builds": [
+    { "src": "api/index.php", "use": "vercel-php@0.7.2" }
+  ],
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "routes": [
