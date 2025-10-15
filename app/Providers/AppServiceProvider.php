@@ -4,8 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\URL;
-// --- WAJIB: Import kelas Vite ---
-use Illuminate\Foundation\Vite; 
+use Illuminate\Foundation\Vite;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,21 +21,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // --- FIX 1: Memaksa HTTPS untuk Vercel ---
+        // --- FIX 1: Paksa HTTPS untuk production (Vercel) ---
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
         }
-        
-        // --- FIX 2: Vercel Workaround untuk Vite Manifest ---
-        // Kita paksa Vite menggunakan direktori build yang benar
-        // tanpa bergantung pada asumsi path Vercel.
+
+        // --- FIX 2: Perbaikan direktori build Vite ---
         if ($this->app->environment('production')) {
-            // Kita asumsikan direktori build adalah 'public/build'
-            Vite::useBuildDirectory('public/build');
-            
-            // Opsional, jika masih gagal, gunakan base path secara eksplisit
-            // Vite::withBaseUrl('/build'); 
+            // Pastikan Vite mencari manifest di folder yang benar
+            app(Vite::class)->useBuildDirectory('build');
+
+            // (Opsional) Jika file JS/CSS masih tidak muncul,
+            // kamu bisa tambahkan base URL seperti ini:
+            // app(Vite::class)->withBaseUrl('/build');
         }
-        // ----------------------------------------------------
     }
 }
