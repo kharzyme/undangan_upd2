@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+// --- TAMBAH INI (Import kelas URL) ---
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // --- TAMBAH LOGIKA INI ---
+        // Memastikan Laravel selalu menggunakan HTTPS di lingkungan produksi Vercel
+        if (config('app.env') === 'production') {
+            URL::forceScheme('https');
+        }
+        // -------------------------
     }
 }
