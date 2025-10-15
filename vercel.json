@@ -19,9 +19,6 @@
       }
     }
   ],
-  "publicFiles": [
-    "public/build/**"
-  ],
   "routes": [
     { "src": "/build/(.*)", "dest": "public/build/$1" },
     { "src": "/codes/(.*)", "dest": "public/codes/$1" },
