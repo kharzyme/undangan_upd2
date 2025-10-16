@@ -28,8 +28,9 @@ class AppServiceProvider extends ServiceProvider
 
         // --- FIX 2: Pastikan Vite pakai folder build ---
         if ($this->app->environment('production')) {
-            Vite::useBuildDirectory('build')
-                ->withBaseUrl('/build');
+            $vite = app(Vite::class);
+            $vite->useBuildDirectory('build');
+            $vite->withBaseUrl('/build');
         }
     }
 }
