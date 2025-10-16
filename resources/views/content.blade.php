@@ -160,7 +160,7 @@
                     <br>
                     <p class="text-left font-Jost text-[11px]">Atas Nama</p>
                     <p class="text-left font-Jost text-[16px] mb-[13px]">a.n Fulanah</p>
-                    <button id="copyButton" data-rekening="12342893754" class="flex items-center justify-center w-full mx-auto px-2 py-1 rounded-full text-[16px] font-Parkinsans bg-cream hover:bg-wheat shadow-xl/10">
+                    <button id="copyButton" data-rekening="12342893754" class="flex items-center justify-center w-full mx-auto px-2 py-1 rounded-full text-[16px] font-Jost bg-cream hover:bg-wheat shadow-xl/10">
                         <span id="buttonText">Copy Nomor Rekening</span> 
                         <i class="fas fa-copy text-[16px] ml-2"></i>
                     </button>
@@ -173,7 +173,7 @@
                     <br>
                     <p class="text-left font-Jost text-[11px]">Atas Nama</p>
                     <p class="text-left font-Jost text-[16px] mb-[13px]">a.n Fulanah</p>
-                    <button id="copyButton2" data-rekening2="62721999473" class="flex items-center justify-center w-full mx-auto px-2 py-1 rounded-full text-[16px] font-Parkinsans bg-cream hover:bg-wheat shadow-xl/10">
+                    <button id="copyButton2" data-rekening2="62721999473" class="flex items-center justify-center w-full mx-auto px-2 py-1 rounded-full text-[16px] font-Jost bg-cream hover:bg-wheat shadow-xl/10">
                         <span id="buttonText2">Copy Nomor Rekening</span> 
                         <i class="fas fa-copy text-[16px] ml-2"></i>
                     </button>
@@ -183,7 +183,7 @@
                     <p class="text-center"><i class="fas fa-gift text-[40px] mb-[20px] mt-[20px]"></i></p>
                     <p class="text-center font-Jost text-[16px] mb-[10px]">Kirim Kado :</p>
                     <p class="text-center font-Jost text-[16px] mb-[13px]">Kediaman Mempelai Wanita</p>
-                    <button id="copyButton3" alamat="Rumah Kediaman Mempelai Wanita" class="flex items-center justify-center w-full mx-auto px-2 py-1 rounded-full text-[16px] font-Parkinsans bg-cream hover:bg-wheat shadow-xl/10">
+                    <button id="copyButton3" alamat="Rumah Kediaman Mempelai Wanita" class="flex items-center justify-center w-full mx-auto px-2 py-1 rounded-full text-[16px] font-Jost bg-cream hover:bg-wheat shadow-xl/10">
                         <span id="buttonText3">Copy Alamat</span> 
                         <i class="fas fa-copy text-[16px] ml-2"></i>
                     </button>
