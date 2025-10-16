@@ -26,14 +26,10 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
-        // --- FIX 2: Perbaikan direktori build Vite ---
+        // --- FIX 2: Pastikan Vite pakai folder build ---
         if ($this->app->environment('production')) {
-            // Pastikan Vite mencari manifest di folder yang benar
-            app(Vite::class)->useBuildDirectory('build');
-
-            // (Opsional) Jika file JS/CSS masih tidak muncul,
-            // kamu bisa tambahkan base URL seperti ini:
-            // app(Vite::class)->withBaseUrl('/build');
+            Vite::useBuildDirectory('build')
+                ->withBaseUrl('/build');
         }
     }
 }
