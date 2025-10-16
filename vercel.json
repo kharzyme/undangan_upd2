@@ -14,16 +14,23 @@
           "routes/**",
           "vendor/**",
           "storage/**",
-          "public/build/**"
+          "public/build/**",
+          "public/images/**",
+          "public/fontawesome/**",
+          "public/codes/**"
         ]
       }
-    }
+    },
+    { "src": "public/build/**", "use": "@vercel/static" },
+    { "src": "public/images/**", "use": "@vercel/static" },
+    { "src": "public/fontawesome/**", "use": "@vercel/static" },
+    { "src": "public/codes/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/build/(.*)", "dest": "public/build/$1" },
-    { "src": "/codes/(.*)", "dest": "public/codes/$1" },
-    { "src": "/images/(.*)", "dest": "public/images/$1" },
-    { "src": "/fontawesome/(.*)", "dest": "public/fontawesome/$1" },
-    { "src": "/(.*)", "dest": "public/index.php" }
+    { "src": "/build/(.*)", "dest": "/public/build/$1" },
+    { "src": "/images/(.*)", "dest": "/public/images/$1" },
+    { "src": "/fontawesome/(.*)", "dest": "/public/fontawesome/$1" },
+    { "src": "/codes/(.*)", "dest": "/public/codes/$1" },
+    { "src": "/(.*)", "dest": "/public/index.php" }
   ]
 }
