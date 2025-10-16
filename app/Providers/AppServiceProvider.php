@@ -30,8 +30,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('production')) {
             $vite = app(Vite::class);
             $vite->useBuildDirectory('build');
-            $vite->withBaseUrl('/build');
         }
     }
 }
-
