@@ -3,7 +3,6 @@ import laravel from 'laravel-vite-plugin'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-    base: '/build/',
     build: {
         outDir: 'public/build',
         emptyOutDir: true,
@@ -12,7 +11,7 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
-            buildDirectory: 'build', // 💡 ini yang penting
+            buildDirectory: 'build', // biar Laravel tahu lokasi manifest.json
         }),
         tailwindcss(),
     ],
